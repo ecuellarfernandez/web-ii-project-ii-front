@@ -15,6 +15,7 @@ import ArtistEdit from './pages/ArtistEdit';
 import AlbumEdit from './pages/AlbumEdit';
 import GenreEdit from './pages/GenreEdit';
 import SongEdit from './pages/SongEdit';
+import AlbumDetail from './pages/AlbumDetail';
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
             <Route index element={<Home />} />
             <Route path="genres/:id" element={<GenreDetail />} />
             <Route path="artists/:id" element={<ArtistDetail />} />
+            <Route path="albums/:id" element={<AlbumDetail />} />
 
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/artists" element={<AdminArtists />} />
