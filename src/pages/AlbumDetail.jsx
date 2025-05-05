@@ -4,9 +4,9 @@ import axios from 'axios';
 import { PlayerContext } from '../context/PlayerContext';
 
 const AlbumDetail = () => {
-    const { id } = useParams(); // Obtiene el ID del álbum desde la URL
+    const { id } = useParams(); 
     const [album, setAlbum] = useState(null);
-    const { playSong } = useContext(PlayerContext); // Contexto para manejar el reproductor
+    const { playSong } = useContext(PlayerContext);
 
     useEffect(() => {
         fetchAlbumDetails();
@@ -17,7 +17,7 @@ const AlbumDetail = () => {
             const res = await axios.get(`http://localhost:3000/albums/${id}`);
             setAlbum({
                 ...res.data,
-                songs: res.data.songs || [], // Asegura que `songs` sea un array
+                songs: res.data.songs || [],
             });
         } catch (err) {
             console.error('Error fetching album details:', err);
